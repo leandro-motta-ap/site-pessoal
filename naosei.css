@@ -1,0 +1,102 @@
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #81326a;
+}
+
+
+body{
+    background-color: black;
+    font-family: arial;
+    color: white;
+    margin-left: 10px;
+
+}
+
+.cabe{
+    width: 99%;
+    background-color: purple;
+    display: inline-block;
+    text-align: left;
+
+}
+
+.out{
+    font-size: 40px;
+    text-decoration: underline;
+    display: inline-block;
+    margin-left: 34%;
+
+}
+
+.ads{
+    width: 33%;
+    display: inline;
+    text-align: center;
+    margin-left: 18%;
+    
+
+}
+
+.botton{
+    margin-left: 20%;
+    width: 20%;
+    border-radius: 50px;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 40px;
+
+}
+
+a{
+    color: white;
+}
+
+.img{
+    text-align: right;
+    margin-right: 2%;
+    display: inline;
+
+}

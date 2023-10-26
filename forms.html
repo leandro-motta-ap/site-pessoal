@@ -1,0 +1,217 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Formularios</title>
+    </head>
+    <body>
+        <h1>Formularios</h1>
+        <fieldset>
+            <legend>Solicitação POST</legend>
+            <form name="frm_post" id="frm_post" method="POST" action="forms_resposta.html">
+                <input type="hidden" name="hid_opcao" id="hid_opcao" value="B"/>
+                <input type="hidden" name="hid_conta" id="hid_conta" value="0253459"/>
+                <label for="frm_msg">Mensagem:</label>
+                <input tabindex="16" type="text" name="frm_msg" id="frm_msg" size="30" 
+                       placeholder="Digite aqui..."
+                       autocomplete="off"/>
+                <br>
+                <label for="frm_rad">Envia Agora?</label>
+                <input tabindex="17" type="radio" name="frm_rad" id="frm_rad" value="S" checked/>Sim
+                <input tabindex="18" type="radio" name="frm_rad" id="frm_rad" value="N"/>Não
+                <br>
+                <label for="frm_chk">Quais dias você deseja receber?</label>
+                <input tabindex="19" type="checkbox" name="frm_chk" id="frm_chk" value="SEG" checked/>Segunda
+                <input tabindex="20" type="checkbox" name="frm_chk" id="frm_chk" value="TER"/>Terça
+                <input tabindex="21" type="checkbox" name="frm_chk" id="frm_chk" value="QUA"/>Quarta
+                <input tabindex="22" type="checkbox" name="frm_chk" id="frm_chk" value="QUI"/>Quinta
+                <input tabindex="23" type="checkbox" name="frm_chk" id="frm_chk" value="SEX"/>Sexta
+                <br>
+                <label for="frm_uf">Estado:</label>
+                <input tabindex="24" list="frm_uf" size="30" 
+                       placeholder="Digite o estado"
+                       autocomplete="off"/>
+                <datalist id="frm_uf">
+                    <option value="Amazonas"/>
+                    <option value="Acre"/>
+                    <option value="Alagoas"/>
+                    <option value="Amapá"/>
+                    <option value="Bahia"/>
+                    <option value="Ceará"/>
+                    <option value="Distrito Federal"/>
+                    <option value="Espírito Santo"/>
+                    <option value="Goiás"/>
+                    <option value="Maranhão"/>
+                    <option value="Mato Grosso"/>
+                    <option value="Mato Grosso do Sul"/>
+                    <option value="Minas Gerais"/>
+                    <option value="Pará"/>
+                    <option value="Paraíba"/>
+                    <option value="Pernambuco"/>
+                    <option value="Piauí"/>
+                    <option value="Rio de Janeiro"/>
+                    <option value="Rio Grande do Norte"/>
+                    <option value="Rondônia"/>
+                    <option value="Roraima"/>
+                    <option value="Sergipe"/>
+                    <option value="São Paulo"/>
+                    <option value="Tocantins"/>    
+                </datalist>     
+                <br>
+                <label>UF</label>
+                <select tabindex="25" name="sel_uf" id="sel_uf"
+                        placeholder="Digite a UF..."
+                        autocomplete="off">
+                    <optgroup label="Centro-Oeste">
+                        <option value="DF">DF</option>
+                        <option value="GO">GO</option>
+                        <option value="MT">MT</option>
+                        <option value="MS">MS</option>
+                    </optgroup>
+                    <optgroup label="Nordeste">
+                        <option value="AL">AL</option>
+                        <option value="BA">BA</option>
+                        <option value="CE">CE</option>
+                        <option value="MA">MA</option>
+                        <option value="PB">PB</option>
+                        <option value="PE">PE</option>
+                        <option value="PI">PI</option>
+                        <option value="RN">RN</option>
+                        <option value="SE">SE</option>    
+                    </optgroup>
+                    <optgroup label="Norte">
+                        <option value="AM">AM</option>
+                        <option value="AC">AC</option>                  
+                        <option value="AP">AP</option>
+                        <option value="PA">PA</option>
+                        <option value="RO">RO</option>
+                        <option value="RR">RR</option>
+                        <option value="TO">TO</option>                                
+                    </optgroup>
+                    <optgroup label="Sudeste">
+                        <option value="ES">ES</option>
+                        <option value="MG" selected>MG</option>
+                        <option value="RJ">RJ</option>
+                        <option value="SP">SP</option>
+                    </optgroup>    
+                </select>
+                <br>
+                <label for="txt_obs">Observações: </label><br>
+                <textarea tabindex="26" name="txt_obs" id="txt_obs" rows="5" cols="30" autocomplete="off"></textarea>
+                <br>
+                <input tabindex="27" type="submit" value="Enviar">
+                <input tabindex="28" type="reset" value="Limpar"/>
+                <input tabindex="29" type="button" value="Nova janela"/>
+                <button tabindex="30" type="button" name="btn_fechar_janela" id="btn_fechar_janela">Fechar Janela</button>
+                <!-- Testar amanha
+                    https://www.w3schools.com/html/tryit.asp?filename=tryhtml_elem_output
+                -->
+                <output name="out_post" for="frm_msg frm_rad frm_chk frm_uf sel_uf txt_obs"></output>                                
+            </form> 
+        </fieldset>
+        <fieldset>
+            <legend>Solicitação GET</legend>
+            <form name="frm_get" id="frm_get" method="GET" action="forms_resposta.html">
+                <input type="hidden" name="hid_opcao" id="hid_opcao" value="B"/>
+                <input type="hidden" name="hid_conta" id="hid_conta" value="0253459"/>
+                <label for="frm_msg">Mensagem: </label>
+                <input tabindex="1" type="text" name="frm_msg" id="frm_msg" size="30" 
+                       placeholder="Digite aqui..."
+                       autocomplete="off"/>
+                <br>
+                <label for="frm_rad">Envia Agora?</label>
+                <input tabindex="2" type="radio" name="frm_rad" id="frm_rad" value="S" checked/>Sim
+                <input tabindex="3" type="radio" name="frm_rad" id="frm_rad" value="N"/>Não
+                <br>
+                <label for="frm_chk">Quais dias você deseja receber?</label>
+                <input tabindex="4" type="checkbox" name="frm_chk" id="frm_chk" value="SEG" checked/>Segunda
+                <input tabindex="5" type="checkbox" name="frm_chk" id="frm_chk" value="TER"/>Terça
+                <input tabindex="6" type="checkbox" name="frm_chk" id="frm_chk" value="QUA"/>Quarta
+                <input tabindex="7" type="checkbox" name="frm_chk" id="frm_chk" value="QUI"/>Quinta
+                <input tabindex="8" type="checkbox" name="frm_chk" id="frm_chk" value="SEX"/>Sexta
+                <br>
+                <label for="frm_uf">Estado:</label>                
+                <input tabindex="9" list="frm_uf" size="30" 
+                       placeholder="Digite o estado"
+                       autocomplete="off"/>
+                <datalist id="frm_uf">
+                    <option value="Amazonas"/>
+                    <option value="Acre"/>
+                    <option value="Alagoas"/>
+                    <option value="Amapá"/>
+                    <option value="Bahia"/>
+                    <option value="Ceará"/>
+                    <option value="Distrito Federal"/>
+                    <option value="Espírito Santo"/>
+                    <option value="Goiás"/>
+                    <option value="Maranhão"/>
+                    <option value="Mato Grosso"/>
+                    <option value="Mato Grosso do Sul"/>
+                    <option value="Minas Gerais"/>
+                    <option value="Pará"/>
+                    <option value="Paraíba"/>
+                    <option value="Pernambuco"/>
+                    <option value="Piauí"/>
+                    <option value="Rio de Janeiro"/>
+                    <option value="Rio Grande do Norte"/>
+                    <option value="Rondônia"/>
+                    <option value="Roraima"/>
+                    <option value="Sergipe"/>
+                    <option value="São Paulo"/>
+                    <option value="Tocantins"/>    
+                </datalist>
+                <br>
+                <label>UF</label>
+                <select tabindex="10" name="sel_uf" id="sel_uf"
+                        placeholder="Digite a UF..."
+                        autocomplete="off">
+                    <optgroup label="Centro-Oeste">
+                        <option value="DF">DF</option>
+                        <option value="GO">GO</option>
+                        <option value="MT">MT</option>
+                        <option value="MS">MS</option>
+                    </optgroup>
+                    <optgroup label="Nordeste">
+                        <option value="AL">AL</option>
+                        <option value="BA">BA</option>
+                        <option value="CE">CE</option>
+                        <option value="MA">MA</option>
+                        <option value="PB">PB</option>
+                        <option value="PE">PE</option>
+                        <option value="PI">PI</option>
+                        <option value="RN">RN</option>
+                        <option value="SE">SE</option>    
+                    </optgroup>
+                    <optgroup label="Norte">
+                        <option value="AM">AM</option>
+                        <option value="AC">AC</option>                  
+                        <option value="AP">AP</option>
+                        <option value="PA">PA</option>
+                        <option value="RO">RO</option>
+                        <option value="RR">RR</option>
+                        <option value="TO">TO</option>                                
+                    </optgroup>
+                    <optgroup label="Sudeste">
+                        <option value="ES">ES</option>
+                        <option value="MG" selected>MG</option>
+                        <option value="RJ">RJ</option>
+                        <option value="SP">SP</option>
+                    </optgroup>    
+                </select>
+                <br>
+                <label for="txt_obs">Observações: </label><br>
+                <textarea tabindex="11" name="txt_obs" id="txt_obs" rows="5" cols="30" autocomplete="off"></textarea>
+                <br>
+                <input tabindex="12" type="submit" value="Enviar"/>
+                <input tabindex="13" type="reset" value="Limpar"/>
+                <input tabindex="14" type="button" value="Nova janela"/>
+                <button tabindex="15" type="button" name="btn_fechar_janela" id="btn_fechar_janela">Fechar Janela</button>                
+            </form>
+            <!-- Testar amanha
+                https://www.w3schools.com/html/tryit.asp?filename=tryhtml_elem_output
+            -->
+            <output name="out_get" for="frm_msg frm_rad frm_chk frm_uf sel_uf txt_obs"></output>                         
+        </fieldset>
+
+    </body>
+</html>
